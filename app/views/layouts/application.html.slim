@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title
+      = full_title(yield(:title))
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+   header[class="navbar navbar-fixed-top navbar-inverse"]
+    div[class="container"]
+     = link_to "sample app", "#", id:"logo"
+     nav
+      ul[class="nav navbar-nav navbar-right"]
+       li
+        = link_to "Home", "#"
+       li
+        = link_to "Help", "#"
+       li
+        = link_to "Log in", "#"
+   div[class="container"]
+    = yield
